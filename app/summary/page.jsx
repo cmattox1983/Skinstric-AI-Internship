@@ -41,7 +41,6 @@ function Summary() {
   const listsBySection = Object.fromEntries(
     sections.map((section) => {
       const rawEntries = Object.entries(data?.[section] ?? {});
-
       const sortedEntries =
         section === "age"
           ? rawEntries.sort((a, b) => getAgeStart(a[0]) - getAgeStart(b[0]))
@@ -284,25 +283,14 @@ function Summary() {
                   </div>
                 </Link>
 
-                <Link href="/">
-                  <div>
-                    <div className="w-12 h-12 flex items-center justify-center border border-[#1A1B1C] rotate-45 scale-[1] sm:hidden">
-                      <span className="rotate-[-45deg] text-xs font-semibold sm:hidden">
-                        HOME
-                      </span>
-                    </div>
-
-                    <div className="hidden sm:flex flex-row relative justify-center items-center">
-                      <span className="text-sm font-semibold hidden sm:block mr-5">
-                        HOME
-                      </span>
-                      <div className="w-12 h-12 hidden sm:flex justify-center border border-[#1A1B1C] rotate-45 scale-[0.85]"></div>
-                      <span className="absolute right-[15px] bottom-[13px] scale-[0.9] hidden sm:block">
-                        ▶
-                      </span>
-                    </div>
-                  </div>
-                </Link>
+                <div className="mt-4 flex justify-center space-x-6">
+                  <button className="px-6 py-2 bg-white text-gray-800 cursor-default text-sm font-semibold border-2 border-[#1A1B1C]">
+                    RESET
+                  </button>
+                  <button className="px-6 py-2 bg-[#1A1B1C] text-[#FCFCFC] cursor-default text-sm font-semibold">
+                    CONFIRM
+                  </button>
+                </div>
               </div>
             </div>
           </div>

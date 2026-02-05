@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function Hero() {
   const [hoverSide, setHoverSide] = useState(null);
-  const [alignSide, setAlignSide] = useState(null); // delayed alignment to prevent snapping
+  const [alignSide, setAlignSide] = useState(null); 
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -13,18 +13,15 @@ export default function Hero() {
     return () => clearTimeout(timeout);
   }, []);
 
-  // Delay the alignment change until AFTER skincare finishes its delayed move
   useEffect(() => {
     if (!hoverSide) {
       setAlignSide(null);
       return;
     }
 
-    // Sophisticated: 500ms
-    // skincare: 80ms delay + 500ms move = 580ms
     const t = setTimeout(() => {
       setAlignSide(hoverSide);
-    }, 600); // slightly after 580ms so there's no snap at the end
+    }, 600); 
 
     return () => clearTimeout(t);
   }, [hoverSide]);
