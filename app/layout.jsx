@@ -1,7 +1,7 @@
 import "./globals.css";
 import { roobert } from "./fonts";
 import Navbar from "@/components/Navbar";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Skinstric",
