@@ -1,6 +1,7 @@
 import "./globals.css";
 import { roobert } from "./fonts";
 import Navbar from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "Skinstric",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className={`${roobert.variable} antialiased`}>
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
