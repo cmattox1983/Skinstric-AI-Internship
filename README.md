@@ -1,4 +1,4 @@
-![App screenshot](screenshot.png)
+![App screenshot](SkinstricAIScreenshot.png)
 
 # Skinstric AI – Facial Recognition & Demographic Analysis
 
